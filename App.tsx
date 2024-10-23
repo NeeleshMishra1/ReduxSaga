@@ -1,11 +1,17 @@
 
-import React ,{useEffect, useRef, useState}from 'react';
-import { View,Text, StyleSheet , TouchableOpacity, TextInput,} from 'react-native';
+import React from 'react';
+import { View, } from 'react-native';
+import { Main } from './src/screens/main';
+import { Product } from './src/screens/myProduct';
+import { Provider } from 'react-redux';
+import { mystore } from './src/reduxToolKit/store';
 
 function App() {
-  
+
   return (
-<View></View>
+    <Provider store={mystore}>
+    <Main />
+    </Provider>
   );
 }
 
